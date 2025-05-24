@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Pest Traps Dashboard | GIS Portfolio</title>
+    <link rel="stylesheet" href="../style.css" />
+    <!-- Glide.js for carousel (optional if using custom carousel like here) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>GIS Portfolio</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+        </nav>
+    </header>
+
+    <!-- Project Section -->
+    <section class="project-detail">
+        <h2>Mental Health and Greenspace in Edinburgh</h2>
+        <p><strong>Role:</strong> Student, University of Edinburgh</p>
+
+        <h3>Project Summary</h3>
+        <p>
+            As part of a group project, we decided to explore the relationship between mental health and proximity to greenspaces in Edinburgh.
+        </p>
+
+        <div class="project-body">
+            <!-- Text Column -->
+            <div class="project-text">
+                <h3>Key Contributions</h3>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+
+                <h3>Tools & Technologies</h3>
+                <ul>
+                    <li>ArcGIS Pro, ArcGIS Enterprise</li>
+                    <li>Field Maps, Instant Apps, ArcGIS Dashboards</li>
+                    <li>Python (ArcPy) for automation and data processing</li>
+                </ul>
+            </div>
+
+            <!-- Image Carousel Column -->
+            <div class="carousel">
+                <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+
+                <div class="carousel-images">
+                    <img src="../Images/Valve Status Dashboard.png" alt="Pest Trap 1" class="carousel-slide active">
+                </div>
+
+                <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </div>
+
+        <h3>Outcomes</h3>
+        <p>
+
+        </p>
+    </section>
+
+    <!-- Modal -->
+    <div id="imageModal" style="display:none; position:fixed; top:0; left:0; 
+    width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center;">
+        <img id="modalImg" style="max-width:90%; max-height:90%;" />
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="copyright">&copy; Andaleeb Ali | 2025</div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const prevBtn = document.querySelector('.carousel-btn.prev');
+        const nextBtn = document.querySelector('.carousel-btn.next');
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImg');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        function changeSlide(direction) {
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(currentSlide);
+
+            document.querySelectorAll('.carousel-slide').forEach(img => {
+                img.style.cursor = 'pointer';
+                img.addEventListener('click', () => {
+                    modal.style.display = 'flex';
+                    modalImg.src = img.src;
+
+                    // Hide arrows
+                    prevBtn.style.display = 'none';
+                    nextBtn.style.display = 'none';
+                });
+            });
+
+            modal.addEventListener('click', () => {
+                modal.style.display = 'none';
+
+                // Show arrows again
+                prevBtn.style.display = '';
+                nextBtn.style.display = '';
+            });
+        });
+    </script>
+</body>
+
+</html>
