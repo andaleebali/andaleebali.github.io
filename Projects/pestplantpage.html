@@ -2,129 +2,272 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Pest Traps Dashboard | GIS Portfolio</title>
-    <link rel="stylesheet" href="../style.css" />
-    <!-- Glide.js for carousel (optional if using custom carousel like here) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pest Plant Dashboard | Andaleeb Ali</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #222;
+    }
+
+    header {
+      background: #fff;
+      padding: 2rem 1rem;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .project-detail {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      margin-top: 2rem;
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p, li {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .project-body {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .project-text, .carousel {
+      flex: 1 1 400px;
+    }
+
+    .project-text ul {
+      padding-left: 1.2rem;
+    }
+
+    .carousel {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carousel-images {
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .carousel-slide {
+      display: none;
+      width: 100%;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 12px;
+    }
+
+    .carousel-slide.active {
+      display: block;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.8);
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      z-index: 1;
+    }
+
+    .carousel-btn.prev {
+      left: 10px;
+    }
+
+    .carousel-btn.next {
+      right: 10px;
+    }
+
+    #imageModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    #modalImg {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #888;
+      background: #fff;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <h1>GIS Portfolio</h1>
-        <nav>
-            <a href="../index.html">Home</a>
-        </nav>
-    </header>
 
-    <!-- Project Section -->
-    <section class="project-detail">
-        <h2>Pest Plant Dashboard</h2>
-        <p><strong>Role:</strong> GIS Analyst, Gisborne District Council</p>
+  <!-- Header -->
+  <header>
+    <h1>GIS Portfolio</h1>
+    <nav>
+      <a href="../index.html">← Back to Home</a>
+    </nav>
+  </header>
 
-        <h3>Project Summary</h3>
-        <p>
+  <!-- Project Section -->
+  <section class="project-detail">
+    <h2>Pest Plant Dashboard</h2>
+    <p><strong>Role:</strong> GIS Analyst, Gisborne District Council</p>
 
-        </p>
+    <h3>Project Summary</h3>
+    <p>
+      This interactive dashboard provides real-time visibility into pest plant surveillance and treatment 
+      efforts across the Gisborne region. It aggregates field-collected data into a clear and accessible 
+      map-based interface for council staff and stakeholders.
+    </p>
 
-        <div class="project-body">
-            <!-- Text Column -->
-            <div class="project-text">
-                <h3>Key Contributions</h3>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+    <div class="project-body">
+      <!-- Text Column -->
+      <div class="project-text">
+        <h3>Key Contributions</h3>
+        <ul>
+          <li>Designed a user-friendly dashboard layout based on council needs</li>
+          <li>Built ArcGIS Dashboards linked to Field Maps inspections</li>
+          <li>Automated daily updates using ArcPy scripts</li>
+          <li>Enabled spatial filtering, treatment summaries, and mobile access</li>
+        </ul>
 
-                <h3>Tools & Technologies</h3>
-                <ul>
-                    <li>ArcGIS Pro, ArcGIS Enterprise</li>
-                    <li>Field Maps, Instant Apps, ArcGIS Dashboards</li>
-                    <li>Python (ArcPy) for automation and data processing</li>
-                </ul>
-            </div>
+        <h3>Tools & Technologies</h3>
+        <ul>
+          <li>ArcGIS Pro, ArcGIS Enterprise</li>
+          <li>Field Maps, Instant Apps, ArcGIS Dashboards</li>
+          <li>Python (ArcPy) for automation and data processing</li>
+        </ul>
+      </div>
 
-            <!-- Image Carousel Column -->
-            <div class="carousel">
-                <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+      <!-- Image Carousel Column -->
+      <div class="carousel">
+        <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
 
-                <div class="carousel-images">
-                    <img src="../Images/Pest Plant Page 1.png" alt="Pest Trap 1" class="carousel-slide active">
-                    <img src="../Images/Pest Plant Page 2.png" alt="Pest Trap 2" class="carousel-slide">
-                    <img src="../Images/Pest Plant Page 3.png" alt="Pest Trap 3" class="carousel-slide">
-                </div>
-
-                <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
-            </div>
+        <div class="carousel-images">
+          <img src="../Images/Pest Plant Page 1.png" alt="Pest Trap 1" class="carousel-slide active">
+          <img src="../Images/Pest Plant Page 2.png" alt="Pest Trap 2" class="carousel-slide">
+          <img src="../Images/Pest Plant Page 3.png" alt="Pest Trap 3" class="carousel-slide">
         </div>
 
-        <h3>Outcomes</h3>
-        <p>
-            The dashboard enhanced visibility over pest control efforts, allowing for faster response to problem areas
-            and
-            improved resource allocation.
-        </p>
-    </section>
-
-    <!-- Modal -->
-    <div id="imageModal" style="display:none; position:fixed; top:0; left:0; 
-    width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center;">
-        <img id="modalImg" style="max-width:90%; max-height:90%;" />
+        <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="copyright">&copy; Andaleeb Ali | 2025</div>
-    </footer>
+    <h3>Outcomes</h3>
+    <p>
+      The dashboard enhanced visibility over pest control efforts, allowing for faster response to problem areas 
+      and improved resource allocation. It has since been adopted across multiple departments for invasive species tracking.
+    </p>
+  </section>
 
-    <!-- Scripts -->
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const prevBtn = document.querySelector('.carousel-btn.prev');
-        const nextBtn = document.querySelector('.carousel-btn.next');
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImg');
+  <!-- Modal -->
+  <div id="imageModal">
+    <img id="modalImg" />
+  </div>
 
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === index);
-            });
-        }
+  <!-- Footer -->
+  <footer>
+    <div>&copy; Andaleeb Ali | 2025</div>
+  </footer>
 
-        function changeSlide(direction) {
-            currentSlide = (currentSlide + direction + slides.length) % slides.length;
-            showSlide(currentSlide);
-        }
+  <!-- Scripts -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
 
-        document.addEventListener('DOMContentLoaded', () => {
-            showSlide(currentSlide);
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
 
-            document.querySelectorAll('.carousel-slide').forEach(img => {
-                img.style.cursor = 'pointer';
-                img.addEventListener('click', () => {
-                    modal.style.display = 'flex';
-                    modalImg.src = img.src;
+    function changeSlide(direction) {
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
 
-                    // Hide arrows
-                    prevBtn.style.display = 'none';
-                    nextBtn.style.display = 'none';
-                });
-            });
+    document.addEventListener('DOMContentLoaded', () => {
+      showSlide(currentSlide);
 
-            modal.addEventListener('click', () => {
-                modal.style.display = 'none';
-
-                // Show arrows again
-                prevBtn.style.display = '';
-                nextBtn.style.display = '';
-            });
+      slides.forEach(img => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', () => {
+          modal.style.display = 'flex';
+          modalImg.src = img.src;
+          prevBtn.style.display = 'none';
+          nextBtn.style.display = 'none';
         });
-    </script>
+      });
+
+      modal.addEventListener('click', () => {
+        modal.style.display = 'none';
+        prevBtn.style.display = '';
+        nextBtn.style.display = '';
+      });
+    });
+  </script>
 </body>
 
 </html>
