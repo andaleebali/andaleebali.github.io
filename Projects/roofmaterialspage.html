@@ -26,19 +26,15 @@
 
         <h3>Project Summary</h3>
         <p>
-            For my masters dissertation I looked at identifying and classifying roof materials across in Bulawayo,
-            Zimbabwe using high-resolution satellite imagery (WorldView-2) and supervised classification techniques. The
-            primary goal was to see if roof materials could be used as a proxy for understanding wealth distribution
-            across the city.
+            This master's dissertation investigated whether roof colour, extracted from high-resolution satellite
+            imagery, could serve as a proxy for wealth distribution in Bulawayo, Zimbabwe. Due to the lack of direct
+            data on roofing materials, the study focused on classifying visible roof colours (e.g., red, grey, blue)
+            using multispectral data from WorldView-2.
         </p>
         <p>
-            Using machine learning methods (Random Forest and Decision Trees) in ArcGIS Pro and Google Earth Engine, I
-            processed and analyzed imagery layers including RGB, near-infrared, and NDVI. Training data was collected
-            through digitization and visual interpretation, with accuracy assessed using confusion matrices.
-        </p>
-        <p>
-            The final output was an interactive map and attribute layer showing predominant roof materials (e.g., metal,
-            tile, concrete), which was integrated into the council’s internal dashboard systems.
+            The approach combined spatial analysis, remote sensing, and machine learning to segment rooftops and
+            classify them by dominant colour. These classifications were then mapped to explore potential patterns of
+            socio-economic variation across the urban landscape.
         </p>
 
         <div class="project-body">
@@ -46,17 +42,17 @@
             <div class="project-text">
                 <h3>Key Contributions</h3>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>Data Preparation: Processed WorldView-2 imagery and extracted RGB and NIR bands relevant for colour-based analysis.</li>
+                    <li>Training Data: Digitised rooftop training polygons in ArcGIS Pro using visual interpretation.</li>
+                    <li>Classification: Applied supervised classification techniques (Random Forest, Decision Trees) in Python to categorise roofs by colour</li>
+                    <li>Validation: Assessed model accuracy using confusion matrices and field-verified samples where possible.</li>
+                    <li>Visualisation: Created a colour-classified map of Bulawayo rooftops, highlighting spatial clusters and variations.</li>
                 </ul>
 
                 <h3>Tools & Technologies</h3>
                 <ul>
-                    <li>ArcGIS Pro, ArcGIS Enterprise</li>
-                    <li>Field Maps, Instant Apps, ArcGIS Dashboards</li>
-                    <li>Python (ArcPy) for automation and data processing</li>
+                    <li>ArcGIS Pro</li>
+                    <li>Python: GeoPandas, Rasterio, scikit-learn, SAMGeo</li>
                 </ul>
             </div>
 
@@ -66,6 +62,8 @@
 
                 <div class="carousel-images">
                     <img src="../Images/Subset3.png" alt="Study Area" class="carousel-slide active">
+                    <img src="../Images/FinalSegmention.png" alt="Study Area" class="carousel-slide">
+                    <img src="../Images/FinalClassificationwithWV2.jpg" alt="Study Area" class="carousel-slide">
                 </div>
 
                 <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
@@ -74,7 +72,8 @@
 
         <h3>Outcomes</h3>
         <p>
-
+            The final output was a map and attribute layer showing predominant coloured roofs which could indicate
+            asbestos, metal ans tiled roofs in the area.
         </p>
     </section>
 
