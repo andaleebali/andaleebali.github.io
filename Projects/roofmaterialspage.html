@@ -26,10 +26,7 @@
 
         <h3>Project Summary</h3>
         <p>
-            This master's dissertation investigated whether roof colour, extracted from high-resolution satellite
-            imagery, could serve as a proxy for wealth distribution in Bulawayo, Zimbabwe. Due to the lack of direct
-            data on roofing materials, the study focused on classifying visible roof colours (e.g., red, grey, blue)
-            using multispectral data from WorldView-2.
+            As part of my master's dissertation, I investigated whether roof colour could be extracted and classified from high-resolution satellite imagery in Bulawayo, Zimbabwe. This was part of research exploring if roof materials could serve as a proxy for wealth distribution. Due to the lack of direct data on roofing materials, the study focused on classifying visible roof colours (e.g., red, grey, blue) using multispectral data from WorldView-2.
         </p>
         <p>
             The approach combined spatial analysis, remote sensing, and machine learning to segment rooftops and
@@ -42,11 +39,14 @@
             <div class="project-text">
                 <h3>Key Contributions</h3>
                 <ul>
-                    <li>Data Preparation: Processed WorldView-2 imagery and extracted RGB and NIR bands relevant for colour-based analysis.</li>
-                    <li>Training Data: Digitised rooftop training polygons in ArcGIS Pro using visual interpretation.</li>
-                    <li>Classification: Applied supervised classification techniques (Random Forest, Decision Trees) in Python to categorise roofs by colour</li>
-                    <li>Validation: Assessed model accuracy using confusion matrices and field-verified samples where possible.</li>
-                    <li>Visualisation: Created a colour-classified map of Bulawayo rooftops, highlighting spatial clusters and variations.</li>
+                    <li><b>Data Preparation:</b> Extracted RGB and NIR bands relevant for colour-based analysis.</li>
+                    <li><b>Training Data:</b> Manually digitised rooftop training polygons in ArcGIS Pro based on visual interpretation.
+                    </li>
+                    <li><b>Segmentation & Classification:</b> Applied the Segment Anything Model (SAM) for object segmentation and used supervised classifiers (Random Forest, Decision Trees) in Python to categorise rooftops by dominant colour.
+                        Python to categorise roofs by colour</li>
+                    <li><b>Validation:</b> Assessed model accuracy using confusion matrices and field-verified samples where
+                        possible.</li>
+                    <li><b>Visualisation:</b> Created a colour-classified map of Bulawayo rooftops.</li>
                 </ul>
 
                 <h3>Tools & Technologies</h3>
@@ -72,8 +72,8 @@
 
         <h3>Outcomes</h3>
         <p>
-            The final output was a map and attribute layer showing predominant coloured roofs which could indicate
-            asbestos, metal ans tiled roofs in the area.
+            The final output was a geospatial dataset and map showing predominant rooftop colours, which may correspond to materials such as asbestos, metal, or tile. These outputs offer insight into material distribution and potential wealth indicators in the urban area.
+            <br> <br>
         </p>
     </section>
 
