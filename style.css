@@ -83,6 +83,11 @@ nav a:hover {
   transition: transform 0.2s;
 }
 
+.project-card a:link, a:visited {
+  color: #222;
+  text-decoration: none;
+}
+
 .project-card:hover {
   transform: translateY(-4px);
 }
