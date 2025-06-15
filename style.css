@@ -110,9 +110,6 @@ footer {
   max-width: 960px;
   margin: 3rem auto;
   padding: 0 1rem;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .project-detail h2 {
@@ -149,25 +146,11 @@ footer {
   min-width: 280px;
 }
 
-.carousel-images {
-  position: relative;
-  width: 100%;
-}
-
-.carousel {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  max-width: 100%;
-  min-height: 300px;
-}
-
-.slider-gallery {
+.image-gallery {
+  margin: 3rem auto;
   margin-top: 3rem;
   position: relative;
-  max-width: 100%;
+  max-width: 650px;
   display: flex;
   justify-content: center;
   align-items: center;
