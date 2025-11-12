@@ -232,3 +232,16 @@ footer {
     align-items: stretch;
   }
 }
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-buttons a {
+  padding-inline: 20px;
+}
+
+.contact-buttons img {
+  height: 40px;
+}
