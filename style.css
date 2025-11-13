@@ -146,11 +146,21 @@ footer {
   min-width: 280px;
 }
 
+.tags span {
+  display: inline-block;
+  background-color: #eee;
+  color: #333;
+  margin: 0.2rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Image Carousel */
 .image-gallery {
   margin: 3rem auto;
   margin-top: 3rem;
   position: relative;
-  max-width: 650px;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,7 +171,6 @@ footer {
   width: 100%;
   max-height: 400px;
   object-fit: contain;
-  border-radius: 10px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
@@ -174,26 +183,26 @@ footer {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
   border: none;
-  font-size: 2rem;
-  padding: 0.25rem 0.75rem;
+  background-color: #f9f9f9;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.75rem;
   cursor: pointer;
   z-index: 10;
-  border-radius: 6px;
+  border-radius: 100px;
 }
 
 .carousel-btn:hover {
-  background: rgba(0, 0, 0, 0.7);
+  color: #eee;
+  background: #222222c9;
 }
 
 .carousel-btn.prev {
-  left: 10px;
+  left: 0;
 }
 
 .carousel-btn.next {
-  right: 10px;
+  right: 0;
 }
 
 /* Modal full image view */
@@ -213,16 +222,6 @@ footer {
 #imageModal img {
   max-width: 90%;
   max-height: 90%;
-  border-radius: 8px;
-}
-
-.tags span {
-  display: inline-block;
-  background-color: #eee;
-  color: #333;
-  margin: 0.2rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
 }
 
 /* Responsive stacking */
