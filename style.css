@@ -245,3 +245,7 @@ footer {
 .contact-buttons img {
   height: 40px;
 }
+
+.contact-buttons a:hover{
+  opacity: 70%;
+}
