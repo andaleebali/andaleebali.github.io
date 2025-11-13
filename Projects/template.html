@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pest Plant Dashboard | Andaleeb Ali</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>GIS Portfolio</h1>
+    <nav>
+      <a href="../index.html">← Back to Home</a>
+    </nav>
+  </header>
+
+  <!-- Project Section -->
+  <section class="project-detail">
+    <h2>Title</h2>
+    <p><strong>Role:</strong> job title, organisation</p>
+
+    <h3>Project Summary</h3>
+    <p>
+      insert project summary
+    </p>
+
+    <div class="project-body">
+      <!-- Text Column -->
+      <div class="project-text">
+        <h3>Key Contributions</h3>
+        <ul class="project-highlights">
+          <li>some text</li>
+          <li>some text</li>
+          <li>some text</li>
+        </ul>
+      </div>
+      <div class="project-tools">
+        <h3>Tools & Technologies</h3>
+        <div class="tags">
+          <span>tag</span><span>tag</span><span>tag</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image Carousel -->
+    <div class="image-gallery">
+      <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+
+      <div class="carousel-images">
+        <img src="" alt="Insert Image" class="carousel-slide active">
+        <img src="" alt="Insert Image 2" class="carousel-slide">
+        <img src="" alt="Insert Image 3" class="carousel-slide">
+      </div>
+
+      <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <h3>Outcomes</h3>
+    <p>
+      Successes of project
+    </p>
+  </section>
+
+  <!-- Modal -->
+  <div id="imageModal">
+    <img id="modalImg" />
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div>&copy; Andaleeb Ali | 2025</div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    function changeSlide(direction) {
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      showSlide(currentSlide);
+
+      slides.forEach(img => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', () => {
+          modal.style.display = 'flex';
+          modalImg.src = img.src;
+          prevBtn.style.display = 'none';
+          nextBtn.style.display = 'none';
+        });
+      });
+
+      modal.addEventListener('click', () => {
+        modal.style.display = 'none';
+        prevBtn.style.display = '';
+        nextBtn.style.display = '';
+      });
+    });
+  </script>
+</body>
+
+</html>
