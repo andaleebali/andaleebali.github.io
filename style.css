@@ -45,7 +45,7 @@ nav a {
 }
 
 nav a:hover {
-  background: #eee;
+  background: #dcbef374;
 }
 
 .hero {
@@ -90,6 +90,7 @@ nav a:hover {
 
 .project-card:hover {
   transform: translateY(-4px);
+  background: #dcbef374;
 }
 
 footer {
@@ -247,4 +248,5 @@ footer {
 
 .contact-buttons a:hover{
   opacity: 70%;
+  transform: translateY(-4px);
 }
