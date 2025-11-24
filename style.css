@@ -16,6 +16,10 @@ header {
   padding: 2rem 1rem;
   text-align: center;
   border-bottom: 1px solid #eaeaea;
+  background-image: url('Images/taranaki_100m.svg');
+  background-repeat: no-repeat;  
+  background-size: cover;
+  background-position: center;
 }
 
 header h1 {
@@ -45,7 +49,7 @@ nav a {
 }
 
 nav a:hover {
-  background: #dcbef374;
+  background: #d5f3be47;
 }
 
 .hero {
